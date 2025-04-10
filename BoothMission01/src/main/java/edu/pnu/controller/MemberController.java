@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import edu.pnu.domain.MemberVO;
 
 
-@RestController
+@RestController //Controller + ResponsBody
 public class MemberController {
 	//사용자 정보를 담는 List 생성
 	private List<MemberVO> list = new ArrayList<>();
@@ -78,6 +78,7 @@ public class MemberController {
 	
 	//삭제(Delete - delete)
 	@DeleteMapping("/member")
+	//(@RequestParam Integer id) <- 생략 된 것
 	public int removeMember(Integer id) {
 		//list에 id가 있다면, 삭제 후 1 반환 아닐 경우 0반환
 		try {
