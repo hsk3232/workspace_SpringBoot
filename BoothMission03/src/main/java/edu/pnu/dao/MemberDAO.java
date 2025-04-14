@@ -9,7 +9,7 @@ import edu.pnu.domain.MemberVO;
 public class MemberDAO extends JDBConnect {
 	//생성자 생성
 	
-	
+	//모든 사용자를 가져오는 method
 	public List<MemberVO> getAllMember() {
 		List<MemberVO> list = new ArrayList<MemberVO>();
 		String query = "SELECT * From member";
@@ -45,7 +45,7 @@ public class MemberDAO extends JDBConnect {
 			psmt.setInt(1, id);
 			rs = psmt.executeQuery();
 
-			if (rs.next()) {
+			while (rs.next()) {
 				vo.setId(rs.getInt("id"));
 				vo.setPass(rs.getString("pass"));
 				vo.setName(rs.getString(3));
