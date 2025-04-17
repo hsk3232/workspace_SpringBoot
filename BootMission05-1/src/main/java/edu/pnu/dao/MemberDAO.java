@@ -132,7 +132,7 @@ public class MemberDAO extends JDBConnect {
 		Map<String, Object> map = new HashMap<>();
 	
 		
-		String query = "INSERT INTO member (pass, name) value(?, ?) WHERE id=?";
+		String query = "DELETE from member (pass, name) value(?, ?) WHERE id=?";
 		map.put("method", "postMember");
 		map.put("sqlString", query);
 		

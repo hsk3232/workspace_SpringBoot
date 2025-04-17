@@ -66,7 +66,7 @@ public class MemberController {
 	@PutMapping("/member")
 	public MemberVO updateMember(MemberVO memebrVO) {
 		//입력 데이터 중 id를 값을 가지는 객체 생성
-		MemberVO m = getMemberById()
+		MemberVO m = getMemberById();
 		
 		//생성된 객체 값이 null인지 검사 후 0 또는 1반환
 		
@@ -75,7 +75,9 @@ public class MemberController {
 	}
 	//삭제(Delete - delete)
 	@DeleteMapping("/member")
-	public MemberVO getDelete()
+	public MemberVO getDelete() {
+		
+	}
 		//list에 id가 있다면, 삭제 후 1 반환 아닐 경우 0반환
 		
 	

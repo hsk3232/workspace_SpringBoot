@@ -1,7 +1,5 @@
 package com.rubypaper.controller;
 
-import static org.springframework.test.web.client.match.MockRestRequestMatchers.content;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
