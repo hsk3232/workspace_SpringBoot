@@ -1,7 +1,5 @@
 package com.rubypaper.config;
 
-
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,7 +9,8 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class SecurityConfig {
-	@Bean // 컨테이너에 미리 올려 놓기 때문에 내가 설정한 시큐리티 필터가 적용되고 자동 필터는 컨테이너에 올라가지 않음
+	// 컨테이너에 미리 올려 놓기 때문에 내가 설정한 시큐리티 필터가 적용되고 자동 필터는 컨테이너에 올라가지 않음
+	@Bean 
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests(security -> security
 				.requestMatchers("/member/**").authenticated()
