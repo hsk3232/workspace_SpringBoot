@@ -1,1 +1,4 @@
 /.metadata/
+
+# 구글 및 네이버 등의 API
+SpringBootSecurityJWTOAuth2/src/main/resources/application.properties
