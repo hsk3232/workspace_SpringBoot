@@ -51,6 +51,14 @@
 			<artifactId>board-spring-boot-starter</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.6.15.Final</version>
+		</dependency>
 	</dependencies>
 
 	<build>
